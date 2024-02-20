@@ -14,7 +14,7 @@ int main() {
             printf("Invalid input.");
             break;
         }
-
+//TODO: MAKE STRING MAX SIZE INSTEAD OF MAX SIZE DYNAMYC SIZE WITH GETLINE AND STRTOK
         switch(choice) {
             
             case 1:
@@ -99,7 +99,7 @@ int main() {
                 StrList_free(myList);
                 return 0;
             default:
-                printf("Invalid option. Please try again.\n");
+                break;
         }
     }
 

@@ -212,6 +212,7 @@
 #include "StrList.h"
 #include <stdio.h>
 #include <string.h>
+#include <stddef.h>
 
 // Define a node structure for StrList
 typedef struct _Node {
