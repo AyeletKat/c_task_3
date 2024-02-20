@@ -281,7 +281,8 @@ void StrList_print(const StrList* StrList) {
     if (StrList) {
         Node* current = StrList->head;
         while (current != NULL) {
-            printf("%s ", current->data);
+            printf("%s", current->data);
+            if ((current!=NULL) && (current -> next !=NULL)) printf(" ");
             current = current->next;
         }
         printf("\n");

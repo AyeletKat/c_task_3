@@ -6,6 +6,7 @@
 int main() {
     StrList* myList = StrList_alloc();
     int choice;
+    //int size;//trying dinamiic array size for each word
     char data[100]; // מחרוזת לקליטת נתונים מהמשתמש
 
     while (1) {
@@ -20,7 +21,6 @@ int main() {
                 char a;
                 getchar();//i have added trying to fix a bug
                 scanf("%c", &a);
-                if (a == 'A'){ // good enough to compare because it's a single char so ascii value comparison is enough
                     //printf("הכנס מספר מחרוזות להכנס לרשימה: ");
                     int numStrings;
                     scanf("%d", &numStrings);
@@ -34,11 +34,6 @@ int main() {
                         }
                     StrList_insertLast(myList, data);
                     }
-                }
-                else {
-                    printf("Invalid option.");
-                    break;
-                }
                 break;
 
             case 2:
@@ -54,7 +49,7 @@ int main() {
                 StrList_print(myList);
                 break;
             case 4:
-                printf("List's length: %zu\n", StrList_size(myList));
+                printf("%zu\n", StrList_size(myList));
                 break;
             case 5:
                 //printf("הכנס אינדקס: ");
@@ -62,12 +57,12 @@ int main() {
                 StrList_printAt(myList, index);
                 break;
             case 6:
-                printf("Number of chars in list %d\n", StrList_printLen(myList));
+                printf("%d\n", StrList_printLen(myList));
                 break;
             case 7:
                 //printf("הכנס מחרוזת לחיפוש: ");
                 scanf("%s", data);
-                printf("%s appears %d times in list.\n", data, StrList_count(myList, data));
+                printf("%d\n", StrList_count(myList, data));
                 break;
             case 8:
                 //printf("הכנס מחרוזת למחיקה: ");
@@ -94,9 +89,9 @@ int main() {
                 break;
             case 13:
                 if (StrList_isSorted(myList)) {
-                    printf("List is sorted lexicographically.\n");
+                    printf("true\n");
                 } else {
-                    printf("List isn't sorted lexicographically.\n");
+                    printf("false\n");
                 }
                 break;
             case 0:
