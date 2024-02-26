@@ -6,7 +6,7 @@
 int main() {
     StrList* myList = StrList_alloc();
     int choice;
-    char data[200]; // מחרוזת לקליטת נתונים מהמשתמש
+    char data[200];
 
     while (1) {
         if (scanf("%d", &choice) != 1){
